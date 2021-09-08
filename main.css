@@ -1,0 +1,125 @@
+:root {
+    --primary: #00E5E9;
+    --light: #5e89ff;
+    --dark: #1c1c1c;
+}
+
+html {
+    /* scroll-behavior: smooth; */
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Oxanium', sans-serif;
+    height: 100%;
+    background-color: var(--dark);
+    color: white;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+
+    transition: 0.5s;
+}
+
+a:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+a img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+.header {
+    padding: auto;
+    margin: auto;
+    max-width: 600px;
+    height: 50px;
+    text-align: center;
+
+    // border-radius: 10px;
+    /* border: solid var(--primary); */
+}
+
+.header a {
+    float: left;
+    display: block;
+    padding: 14px 16px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.content {
+    padding: 60px 20px;
+
+    margin: auto;
+    max-width: 600px;
+    min-height: 100%;
+    text-align: left;
+
+    padding-bottom: 200px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content .profile-wrapper {
+    width: 100%;
+    text-align: center;
+}
+.content .profile {
+    max-width: 350px;
+    border: var(--primary) 2px solid;
+}
+
+.footer {
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+
+    background-color: var(--dark);
+}
+
+.footer a {
+    margin: 10px;
+}
+
+#moreicon {
+    height: 20px;
+    width: 25px;
+    position: fixed;
+    left: 3%;
+    top: 15%;
+}
+
+#moreicon div {
+    height: 20%;
+    width: 100%;
+}
+
+.iconblock {
+    background-color: var(--light);
+    /* border-radius: 10%; */
+}
+
+.title {
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--light);
+}
+
+.caption {
+    color: var(--light);
+    font-size: 12px;
+}

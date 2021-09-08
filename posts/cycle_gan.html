@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiv Bhatia - CycleGan</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="/index.html" class="home">Home</a>
+      <a href="/blog.html">Blog</a>
+      <a href="https://bit.ly/shiv-bhatia-cv">CV</a>
+    </div>
+
+    <div class="content">
+      <h1>Cycle GAN, or how to turn apples into oranges</h1>
+      <p class="subtitle">Jul 22, 2020</p>
+      <p>
+      This post will assume some familiarity with GANs. For more information about them, check out <a href="https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29">this</a> article. For a more technical explanation of this algorithm, have a look at <a href="https://arxiv.org/abs/1703.10593">the original paper</a>.
+
+      <br><br>
+
+      Style transfer is a really hard problem. If you're thinking about it in classical terms, it seems like you would need a pair of datasets with a one-to-one correspondence between them, which is uncommon to say the least. 
+
+      <br><br>
+
+      <img src="https://images.theconversation.com/files/57990/original/z35vm2ds-1409634662.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip">
+      <span class=caption>Perhaps you can think of a phrase that is relevant to this situation.</span>
+
+      <br><br>
+
+      For example, let's say you were trying to turn images of apples into oranges. If you just used an autoencoder architecture, you would need a (fairly large) dataset of pairs of images that sort of look like each other. It's not immediately obvious to me how you would go about making that.
+
+      <br><br>
+
+      Luckily, there's a better way to generate samples of a given category. GANs use a discriminator network to force a generator into better representations, sort of like a policeman and a counterfeiter. I won't go into detail, but the essential idea is that these networks are trained against each other (hence the word 'adversarial'), until the generator/counterfeiter is good enough to pass its creations off as genuine items.
+
+      <br><br>
+
+      <img src="https://miro.medium.com/max/3691/1*cxnqsjXYP-lx-3afYsuxXQ.png">
+      <span class=caption>A high-level overview of GAN architecture.</span>
+
+      <br><br>
+
+      Our problem is slightly different though. Instead of using random noise to seed the generator, we're trying to use images in a different class. So we use two autoencoders as the generators, and use the discriminator 's output as loss.
+
+      <br><br>
+
+      So yay! That's pretty much it. There's just one last step: to cycle back. After we transfer an image in set X to set Y and get the loss with the Y discriminator, we then apply the Y to X translator to get back to the original set X. Then we just compare this image to the orginal image, and add that to the loss! It's a little bit magical the first time you see how it works.
+
+      <br><br>
+
+      Embarrassing personal anecdote: I was playing around with this algorithm last year while looking for a research project at NTT Data, and I had what I thought was a brilliant idea: what if we got rid of the discriminator networks and just used the cycle loss? Being inexperienced and foolish, I decided this would work before even testing it, and got super excited. I told my mentors at the company that I had found something awesome, and even started writing the abstract of a new paper (so cringey in hindsight).
+
+      <br><br>
+
+      Shockingly enough, it didn't work. It was pretty funny: I trained the model in Tensorflow overnight on my (very slow) Macbook Air, and woke up to discover that the generators had just learned to map images to themselves! That way, the cycle loss was practically zero, but nothing had been learned. Since that day, I always make sure to test my models before getting too excited about them.
+
+      <br><br>
+
+      <img src="https://miro.medium.com/max/2880/1*LNAjmkCJ_yuFiK_syedONw.jpeg">
+      <span class=caption>An example of CycleGAN's awesomeness: <a href = "https://towardsdatascience.com/turning-fortnite-into-pubg-with-deep-learning-cyclegan-2f9d339dcdb0">someone</a> made a Fortnite to PUBG style transfer engine.</span>
+
+      <br><br>
+      </p>
+    </div>
+  </body>
+</html>
