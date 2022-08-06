@@ -1,6 +1,6 @@
 :root {
     --primary: rgb(182, 0, 0);
-    --light: #5e89ff;
+    --secondary: rgb(99, 0, 0);
     background: #ffffff;
 }
 
@@ -108,7 +108,7 @@ a img {
 }
 
 .iconblock {
-    background-color: var(--light);
+    background-color: var(--secondary);
     /* border-radius: 10%; */
 }
 
@@ -117,10 +117,10 @@ a img {
 }
 
 .subtitle {
-    color: var(--light);
+    color: var(--secondary);
 }
 
 .caption {
-    color: var(--light);
+    color: var(--secondary);
     font-size: 12px;
 }
