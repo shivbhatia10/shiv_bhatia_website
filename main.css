@@ -1,7 +1,7 @@
 :root {
-    --primary: #00E5E9;
+    --primary: rgb(182, 0, 0);
     --light: #5e89ff;
-    --dark: #212121;
+    background: #ffffff;
 }
 
 html {
@@ -13,8 +13,8 @@ body {
     margin: 0;
     font-family: 'Oxanium', sans-serif;
     height: 100%;
-    background-color: var(--dark);
-    color: white;
+    background-color: var(background);
+    color: rgb(0, 0, 0);
     text-align: left;
 }
 
@@ -27,7 +27,7 @@ a {
 
 a:hover {
     background: var(--primary);
-    color: var(--dark);
+    color: var(background);
 }
 
 a img {
@@ -75,6 +75,7 @@ a img {
     width: 100%;
     text-align: center;
 }
+
 .content .profile {
     max-width: 350px;
     border: var(--primary) 2px solid;
@@ -86,7 +87,7 @@ a img {
     width: 100%;
     bottom: 0;
 
-    background-color: var(--dark);
+    background-color: var(background);
 }
 
 .footer a {
