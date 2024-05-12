@@ -1,6 +1,7 @@
 :root {
     --primary: rgb(0, 63, 209);
     --secondary: rgb(0, 238, 255);
+    --tiling: rgba(4, 0, 221, 0.104);
     background: #ffffff;
 }
 
@@ -46,7 +47,8 @@ a img {
     max-width: 600px;
     height: 50px;
     text-align: center;
-    /* border: solid var(--primary); */
+
+    background-color: var(--tiling);
 }
 
 .header a {
@@ -65,22 +67,9 @@ a img {
     max-width: 600px;
     text-align: left;
 
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
+    background-color: var(--tiling);
 }
 
-.footer {
-    position: fixed;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-
-    background-color: var(background);
-}
-
-.footer a {
-    margin: 10px;
-}
 
 .title {
     color: var(--primary);
@@ -95,10 +84,11 @@ a img {
     display: flex;
     list-style: none;
     padding: 0;
+    font-size: 20px;
 }
 
 .social-icons li {
-    margin-right: 10px;
+    margin-left: 10px;
     /* Space between icons */
 }
 
