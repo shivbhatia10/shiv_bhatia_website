@@ -1,6 +1,6 @@
 :root {
-    --primary: rgb(182, 0, 0);
-    --secondary: rgb(99, 0, 0);
+    --primary: rgb(0, 63, 209);
+    --secondary: rgb(0, 238, 255);
     background: #ffffff;
 }
 
@@ -46,8 +46,6 @@ a img {
     max-width: 600px;
     height: 50px;
     text-align: center;
-
-    // border-radius: 10px;
     /* border: solid var(--primary); */
 }
 
@@ -91,4 +89,20 @@ a img {
 .caption {
     color: var(--secondary);
     font-size: 12px;
+}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    margin-right: 10px;
+    /* Space between icons */
+}
+
+.social-icons a {
+    color: var(--primary);
+    /* Icon color */
 }
