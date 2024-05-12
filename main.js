@@ -1,30 +1,59 @@
-let canvas;
-function setup() {
-  canvas = createCanvas(window.innerWidth, window.innerHeight);
-  canvas.position(0, 0, 'fixed')
-  canvas.style('z-index', '-1')
-}
-
-let t = 0
-function draw() {
-  translate(width/2, height/2);
-  stroke(
-    (t*t*t)%255,
-    (t*t)%255,
-    (t*t*t*t)%255
-  );
-  // fill(255);
-  noFill();
-  strokeWeight(5);
-  beginShape();
-  for (let i = 0; i < 4; i++) {
-    vertex(
-      600 * cos(t/4) * cos(t/10 + i*(5)) * sin(t/5), 
-      400 * sin(t/4) * sin(t/10 + i*(5)) * sin(t/5)
-    );
+// Class definition for Ripple
+class Ripple {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radius = 0;
+    this.alpha = 255;
   }
-  endShape(CLOSE);
-  
-  t+=0.15;
+
+  // Update properties of the ripple
+  update() {
+    this.radius += 2; // Expansion rate of ripple
+    this.alpha -= 5; // Fade rate
+  }
+
+  // Render the ripple on canvas
+  draw(p) {
+    p.noFill();
+    p.strokeWeight(1);
+    p.stroke(0, 63, 209, this.alpha);
+    p.ellipse(this.x, this.y, this.radius * 2);
+  }
+
+  // Determine if the ripple is still visible
+  isAlive() {
+    return this.alpha > 0;
+  }
 }
 
+// Only initialize p5 if on a desktop
+if (window.innerWidth > 800) {
+  new p5((p) => {
+    let ripples = [];
+
+    p.setup = () => {
+      p.createCanvas(p.windowWidth, p.windowHeight);
+      p.background(0);
+    };
+
+    p.draw = () => {
+      p.background(255);
+      for (let i = ripples.length - 1; i >= 0; i--) {
+        ripples[i].update();
+        ripples[i].draw(p);
+        if (!ripples[i].isAlive()) {
+          ripples.splice(i, 1);
+        }
+      }
+    };
+
+    p.mouseDragged = () => {
+      ripples.push(new Ripple(p.mouseX, p.mouseY));
+    };
+
+    p.mouseClicked = () => {
+      ripples.push(new Ripple(p.mouseX, p.mouseY));
+    };
+  }, "canvas-container");
+}
