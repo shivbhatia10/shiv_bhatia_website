@@ -44,11 +44,11 @@ a img {
 .header {
     padding: auto;
     margin: auto;
-    max-width: 600px;
+    max-width: 700px;
     height: 50px;
     text-align: center;
 
-    background-color: var(--tiling);
+    /* background-color: var(--tiling); */
 }
 
 .header a {
@@ -61,12 +61,11 @@ a img {
 }
 
 .content {
-    padding: 100px;
+    padding: 100px 100px 0px 100px;
 
     margin: auto;
     max-width: 600px;
     text-align: left;
-    height: 100%;
 
     /* background-color: var(--tiling); */
 }
