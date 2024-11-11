@@ -1,13 +1,9 @@
 :root {
-    --primary: rgb(0, 63, 209);
-    --secondary: rgb(0, 238, 255);
-    --tiling: rgba(4, 0, 221, 0.104);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(0, 157, 255);
+    --header: rgb(26, 0, 221);
+    --date: rgb(0, 133, 13);
     background: #ffffff;
-}
-
-html {
-    /* scroll-behavior: smooth; */
-    height: 100%;
 }
 
 body {
@@ -15,121 +11,30 @@ body {
     font-family: 'Oxanium', sans-serif;
     height: 100%;
     background-color: var(background);
-    color: rgb(0, 0, 0);
+    color: var(--primary);
     text-align: left;
+    padding: 0 10%;
+    line-height: 30px;
 }
 
-p {
-    margin-bottom: 50px;
+section {
+    padding: 10px;
+    /* border-bottom: var(--primary) 1px dotted; */
+}
+
+h1,
+h3 {
+    color: var(--header);
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary);
-
-    transition: 0.5s;
-}
-
-/* a:hover {
-    background: var(--primary);
-    color: var(background);
-} */
-
-a img {
-    height: 30px;
-    margin-right: 10px;
-}
-
-
-.header {
-    padding: auto;
-    margin: auto;
-    max-width: 700px;
-    height: 50px;
-    text-align: center;
-
-    /* background-color: var(--tiling); */
-}
-
-.header a {
-    float: left;
-    display: block;
-    padding: 14px 16px;
-    margin: auto;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.content {
-    padding: 80px 80px 0px 80px;
-
-    margin: auto;
-    max-width: 800px;
-    text-align: left;
-
-    /* background-color: var(--tiling); */
-}
-
-
-.title {
-    color: var(--primary);
-}
-
-.caption {
     color: var(--secondary);
-    font-size: 12px;
 }
 
-.social-icons {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    font-size: 20px;
+.date {
+    color: var(--date);
 }
 
-.social-icons li {
-    margin-left: 10px;
-    /* Space between icons */
-}
-
-.social-icons a {
-    color: var(--primary);
-    /* Icon color */
-}
-
-#canvas-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Makes sure the canvas is behind other content */
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    /* Ensures content is above the canvas */
-    /* other styles for content */
-}
-
-.research_project {
-    display: flex;
-    align-items: flex-start;
-    /* Aligns items at the start of the container */
-}
-
-.research_project img {
-    width: 100px;
-    /* Adjust the width as needed */
-    height: auto;
-    /* Keeps the aspect ratio */
-    margin-right: 20px;
-    /* Space between image and text */
-}
-
-.research_project h2,
-.research_project p {
-    margin: 0;
+ul {
+    list-style-type: none;
 }

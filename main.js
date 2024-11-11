@@ -1,59 +1,50 @@
 // Class definition for Ripple
-class Ripple {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.radius = 0;
-    this.alpha = 255;
+class Circle {
+  constructor(position, velocity, radius, r, g, b) {
+    this.position = position;
+    this.velocity = velocity;
+    this.radius = radius;
+    this.color = color(r, g, b, 100)
   }
 
-  // Update properties of the ripple
   update() {
-    this.radius += 2; // Expansion rate of ripple
-    this.alpha -= 5; // Fade rate
+    this.position.add(this.velocity);
+    if (this.position.x < this.radius || this.position.x > width - this.radius) {
+      this.velocity.x *= -1;
+    }
+    if (this.position.y < this.radius || this.position.y > height - this.radius) {
+      this.velocity.y *= -1;
+    }
   }
 
-  // Render the ripple on canvas
-  draw(p) {
-    p.noFill();
-    p.strokeWeight(1);
-    p.stroke(0, 63, 209, this.alpha);
-    p.ellipse(this.x, this.y, this.radius * 2);
-  }
-
-  // Determine if the ripple is still visible
-  isAlive() {
-    return this.alpha > 0;
+  draw() {
+    noFill();
+    stroke(this.color);
+    ellipse(this.position.x, this.position.y, this.radius * 2);
   }
 }
 
-// Only initialize p5 if on a desktop
-if (window.innerWidth > 800) {
-  new p5((p) => {
-    let ripples = [];
+let circles = [];
+let NUM_CIRCLES = 3;
 
-    p.setup = () => {
-      p.createCanvas(p.windowWidth, p.windowHeight);
-      p.background(0);
-    };
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  for (let i = 0; i < NUM_CIRCLES; i++) {
+    let radius = random(10, 50);
+    let position = createVector(random(radius, width - radius), random(radius, height - radius));
+    let velocity = createVector(random(-1, 1), random(-1, 1));
+    let g = random(255);
+    let r = 0;
+    let b = 255;
+    circles.push(new Circle(position, velocity, radius, r, g, b));
+  }
+  strokeWeight(2);
+}
 
-    p.draw = () => {
-      p.background(255);
-      for (let i = ripples.length - 1; i >= 0; i--) {
-        ripples[i].update();
-        ripples[i].draw(p);
-        if (!ripples[i].isAlive()) {
-          ripples.splice(i, 1);
-        }
-      }
-    };
-
-    p.mouseDragged = () => {
-      ripples.push(new Ripple(p.mouseX, p.mouseY));
-    };
-
-    p.mouseClicked = () => {
-      ripples.push(new Ripple(p.mouseX, p.mouseY));
-    };
-  }, "canvas-container");
+function draw() {
+  background(255);
+  for (let circle of circles) {
+    circle.update();
+    circle.draw();
+  }
 }
