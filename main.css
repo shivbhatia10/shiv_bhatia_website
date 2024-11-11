@@ -2,7 +2,8 @@
     --primary: rgb(0, 0, 0);
     --secondary: rgb(0, 157, 255);
     --header: rgb(26, 0, 221);
-    --date: rgb(0, 133, 13);
+    --date: rgb(78, 97, 236);
+    --comment: rgb(29, 178, 3);
     background: #ffffff;
 }
 
@@ -33,6 +34,11 @@ a {
 
 .date {
     color: var(--date);
+}
+
+.comment {
+    color: var(--comment);
+    padding-left: 40px;
 }
 
 ul {
