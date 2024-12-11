@@ -1,10 +1,10 @@
 :root {
-    --primary: rgb(0, 0, 0);
+    --primary: rgb(255, 255, 255);
     --secondary: rgb(0, 157, 255);
-    --header: rgb(26, 0, 221);
+    --header: rgb(0, 173, 221);
     --date: rgb(78, 97, 236);
     --comment: rgb(29, 178, 3);
-    background: #ffffff;
+    background: rgb(0, 0, 0);
 }
 
 body {
