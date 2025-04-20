@@ -14,7 +14,7 @@ body {
     background-color: var(background);
     color: var(--primary);
     text-align: left;
-    padding: 0 10%;
+    padding: 0 15%;
     line-height: 30px;
 }
 
