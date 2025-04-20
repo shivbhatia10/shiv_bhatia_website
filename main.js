@@ -4,7 +4,7 @@ class Circle {
     this.position = position;
     this.velocity = velocity;
     this.radius = radius;
-    this.color = color(r, g, b, 100)
+    this.color = color(r, g, b, 100);
   }
 
   update() {
@@ -42,7 +42,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(255);
   for (let circle of circles) {
     circle.update();
     circle.draw();

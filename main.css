@@ -1,15 +1,15 @@
 :root {
-    --primary: rgb(255, 255, 255);
+    --primary: rgb(0, 0, 0);
     --secondary: rgb(0, 157, 255);
     --header: rgb(0, 173, 221);
     --date: rgb(78, 97, 236);
     --comment: rgb(29, 178, 3);
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
 }
 
 body {
     margin: 0;
-    font-family: 'Oxanium', sans-serif;
+    font-family: "Oxanium", sans-serif;
     height: 100%;
     background-color: var(background);
     color: var(--primary);
