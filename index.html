@@ -1,114 +1,185 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Oxanium&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link rel="stylesheet" href="main.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="main.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js" type="text/javascript"></script>
-    <!-- <script src="main.js" type="text/javascript"></script> -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"
+            type="text/javascript"
+        ></script>
+        <!-- <script src="main.js" type="text/javascript"></script> -->
 
-    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+        <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
 
-    <title>shiv bhatia</title>
+        <title>shiv bhatia</title>
 
-    <style>
-      canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-    </style>
-  </head>
+        <style>
+            canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        </style>
+    </head>
 
-  <body>
-    <section>
-      <h1 class="title">[shiv_bhatia] $</h1>
-    </section>
+    <body>
+        <section>
+            <h1 class="title">[shiv_bhatia] $</h1>
+        </section>
 
-    <section>
-      <p>
-        <a href="https://twitter.com/z_endra_" target="_blank" rel="noopener noreferrer">[twitter]</a>
-        <a href="https://github.com/shivbhatia10" target="_blank" rel="noopener noreferrer">[github]</a>
-        <a href="https://www.linkedin.com/in/shiv-bhatia/" target="_blank" rel="noopener noreferrer">[linkedin]</a>
-      </p>
-    </section>
+        <section>
+            <p>
+                <a
+                    href="https://twitter.com/z_endra_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[twitter]</a
+                >
+                <a
+                    href="https://github.com/shivbhatia10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[github]</a
+                >
+                <a
+                    href="https://www.linkedin.com/in/shiv-bhatia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >[linkedin]</a
+                >
+            </p>
+        </section>
 
-    <section>
-      <p>Hi! I'm Shiv, I'm a programmer based in London.</p>
-      <p>
-        I'm interested in mechanistic interpretability, programming languages, algebraic geometry, and a bunch of other stuff. When I'm not working on programming projects or thinking about a math
-        puzzle, I like hiking, cycling, playing guitar, and reading science fiction.
-      </p>
-    </section>
+        <section>
+            <p>Hi! I'm Shiv, I'm a programmer based in London.</p>
+            <p>
+                I'm interested in mechanistic interpretability, Rust, geometry,
+                quantum mechanics, and a bunch of other stuff. When I'm not
+                working on programming projects or thinking about a math puzzle,
+                I like hiking, cycling, playing piano and guitar, and reading
+                lots of books.
+            </p>
+            <p>Currently I'm:</p>
+            <ul>
+                <li>
+                    working on the
+                    <a href="https://www.janestreet.com/puzzles/current-puzzle/"
+                        >Jane Street monthly puzzle</a
+                    >
+                </li>
+                <li>getting better at sight reading music</li>
+                <li></li>
+            </ul>
+        </section>
 
-    <section>
-      <h3>[projects]</h3>
-      <p><a href="https://github.com/shivbhatia10/wrist">[wrist]</a> - A fast, shell-agnostic terminal history application for MacOS written in Rust.</p>
-      <p>
-        <a href="https://github.com/shivbhatia10/torch_sparse_autoencoder">[torch_sparse_autoencoder]</a> - A minimal Pytorch library for handling sparse autoencoders for language/vision models.
-        Designed to work for a wide range of model architectures while still providing a simple API.
-      </p>
-      <p><a href="https://github.com/shivbhatia10/advent_of_code_2024">[advent_of_code_2024]</a> - My complete solutions to the Advent of Code 2024 challenges, written in OCaml.</p>
-      <p><a href="https://github.com/shivbhatia10/deto_x">[deto_x]</a> - A Chrome extension that lets you filter out tweets with a custom prompt and LLMs.</p>
-      <p>
-        <a href="https://github.com/shivbhatia10/IRSpectraToFunctionalGroupsCNN">[IR_spectra_CNN_classifier]</a> - Using IR spectra data for organic compounds, we trained a CNN to predict the
-        functional groups present in a molecule. The final model achieved an F1 score better than an average first year chemistry student at Imperial.
-      </p>
-      <p>
-        <a href="https://github.com/shivbhatia10/CellularSheafGenerator">[random cellular sheaf generator]</a> - Often in computational algebraic topology, it's useful to be able to randomly generate
-        simplicial complexes of arbitrary dimension in a usable format for experiments. Working with a researcher at Imperial I wrote a small library for this purpose, specifically tailored to
-        persistent homology experiments for topological data analysis.
-      </p>
-      <p>
-        <a href="https://github.com/shivbhatia10/csvtui">[csvtui]</a> - A small Rust app that lets you view and edit csv files from the terminal with Vim-like keybindings. I use it as a daily metric
-        tracker.
-      </p>
-      <p>
-        <a href="https://terencehernandez.com/files/WACC/WACCLangSpec.pdf">[WACC]</a> - A compiler written in Scala with <a href="https://github.com/j-mie6/parsley">parsley</a> for a variant of the
-        While family of languages.
-      </p>
-      <p><a href="https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf">[pintos]</a> - My friends and I extended an x86 operating system written in C with threads and user programs.</p>
-      <p class="comment"># TODO: finish this section</p>
-    </section>
-
-    <section>
-      <h3>[history]</h3>
-      <p>
-        <span class="date">[jan 2025]</span> - Organised a <a href="https://www.linkedin.com/feed/update/urn:li:activity:7287150457280450561">hackathon</a> focused on interpretability in AI as part of
-        <a href="ilikethefuture.com">SoTA</a>, a non-profit I co-founded with the aim of promoting techno-optimism in the UK.
-      </p>
-      <p>
-        <span class="date">[june - sept 2024]</span> - I came back for a second internship at Palantir, where I developed a version control system for
-        <a href="https://www.palantir.com/platforms/foundry/marketplace/">Marketplace</a> products.
-      </p>
-      <p>
-        <span class="date">[sept 2020 - june 2024]</span> - I graduated with a first class MEng from Imperial College London where I studied maths and CS, mostly geometry, quantum physics, and deep
-        learning.
-      </p>
-      <p><span class="date">[june - oct 2023]</span> - Spent a summer as a software engineering intern at Palantir, where I worked on automations for ontology entities.</p>
-      <p>
-        <span class="date">[jan - oct 2023]</span> - I worked on the computer vision system for the only UK team to compete in the world finals of the European Rover Challenge 2023. We built a Mars
-        rover prototype with a 360-degree camera on its head that was capable of simultaneous localisation and mapping on uneven terrain. Ranked 1st on one of the major challenges and 11th out of 25
-        global teams in the final. <a href="https://www.imperial.ac.uk/news/248356/student-built-mars-rover-international-competition/">media coverage</a>
-      </p>
-      <p>
-        <span class="date">[jan - june 2023]</span> - My flatmates and I built RCoin, a real-time auditable stablecoin pegged to the South African Rand. We developed a complete app and working payment
-        platform which was designed to replace expensive and monopolistic payment solutions available in Eswatini. Got to consult directly with the (actual) finance minister of Eswatini on the design
-        of the platform. We were the headline presentation at the Brevan Howard crypto showcase 2023, and we won the Ocado Group Project prize for having the best 3rd year group project in the year at
-        Imperial.
-      </p>
-      <p><span class="date">[june - oct 2022]</span> - Did an internship at Microsoft in London, where I worked on adding video conferencing functionality to a unified communications app.</p>
-    </section>
-  </body>
+        <section>
+            <h3>[projects]</h3>
+            <p class="comment"># some things I've built or done</p>
+            <p>
+                <a href="https://github.com/shivbhatia10/dominion-rust"
+                    >[dominion_rust]</a
+                >
+                - A Rust implementation of one of my favourite card games,
+                Dominion.
+            </p>
+            <p>
+                <a href="https://github.com/shivbhatia10/wrist">[wrist]</a> - A
+                fast, shell-agnostic terminal history application for MacOS
+                written in Rust.
+            </p>
+            <p>
+                <a
+                    href="https://github.com/shivbhatia10/torch_sparse_autoencoder"
+                    >[torch_sparse_autoencoder]</a
+                >
+                - A minimal Pytorch library for handling sparse autoencoders for
+                language/vision models. Designed to work for a wide range of
+                model architectures while still providing a simple API.
+            </p>
+            <p>
+                <a href="https://github.com/shivbhatia10/advent_of_code_2024"
+                    >[advent_of_code_2024]</a
+                >
+                - My complete solutions to the Advent of Code 2024 challenges,
+                written in OCaml.
+            </p>
+            <p>
+                <a href="https://github.com/shivbhatia10/deto_x">[deto_x]</a> -
+                A Chrome extension that lets you filter out tweets with a custom
+                prompt and LLMs.
+            </p>
+            <p>
+                <a
+                    href="https://github.com/shivbhatia10/IRSpectraToFunctionalGroupsCNN"
+                    >[IR_spectra_CNN_classifier]</a
+                >
+                - Using IR spectra data for organic compounds, we trained a CNN
+                to predict the functional groups present in a molecule. The
+                final model achieved an F1 score better than an average first
+                year chemistry student at Imperial.
+            </p>
+            <p>
+                <a href="https://arxiv.org/abs/2405.20174"
+                    >[tropical_expressivity_of_neural_networks</a
+                >
+                - A paper I worked on exploring how tropical geometry can be
+                used to derive information theoretic properties of neural
+                networks.
+            </p>
+            <p>
+                <a href="https://github.com/shivbhatia10/CellularSheafGenerator"
+                    >[random cellular sheaf generator]</a
+                >
+                - Often in computational algebraic topology, it's useful to be
+                able to randomly generate simplicial complexes of arbitrary
+                dimension in a usable format for experiments. Working with a
+                researcher at Imperial I wrote a small library for this purpose,
+                specifically tailored to persistent homology experiments for
+                topological data analysis.
+            </p>
+            <p>
+                <a href="https://github.com/shivbhatia10/csvtui">[csvtui]</a> -
+                A small Rust app that lets you view and edit csv files from the
+                terminal with Vim-like keybindings. I use it as a daily metric
+                tracker.
+            </p>
+            <p>
+                <a
+                    href="https://terencehernandez.com/files/WACC/WACCLangSpec.pdf"
+                    >[WACC]</a
+                >
+                - A compiler written in Scala with
+                <a href="https://github.com/j-mie6/parsley">parsley</a> for a
+                variant of the While family of languages.
+            </p>
+            <p>
+                <a href="https://www.doc.ic.ac.uk/~mjw03/OSLab/pintos.pdf"
+                    >[pintos]</a
+                >
+                - An x86 operating system written in C with threads and user
+                programs.
+            </p>
+        </section>
+    </body>
 </html>

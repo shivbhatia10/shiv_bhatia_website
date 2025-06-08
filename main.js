@@ -9,10 +9,16 @@ class Circle {
 
   update() {
     this.position.add(this.velocity);
-    if (this.position.x < this.radius || this.position.x > width - this.radius) {
+    if (
+      this.position.x < this.radius ||
+      this.position.x > width - this.radius
+    ) {
       this.velocity.x *= -1;
     }
-    if (this.position.y < this.radius || this.position.y > height - this.radius) {
+    if (
+      this.position.y < this.radius ||
+      this.position.y > height - this.radius
+    ) {
       this.velocity.y *= -1;
     }
   }
@@ -31,7 +37,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < NUM_CIRCLES; i++) {
     let radius = random(10, 50);
-    let position = createVector(random(radius, width - radius), random(radius, height - radius));
+    let position = createVector(
+      random(radius, width - radius),
+      random(radius, height - radius),
+    );
     let velocity = createVector(random(-1, 1), random(-1, 1));
     let g = random(255);
     let r = 0;
