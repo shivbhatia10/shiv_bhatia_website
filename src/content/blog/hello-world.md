@@ -2,7 +2,7 @@
 title: "Hello, world"
 description: "A placeholder first post to test the blog layout."
 date: 2026-06-06
-draft: false
+draft: true
 ---
 
 This is a placeholder post — mostly here so I can see what the blog layout looks like before I write anything real.
