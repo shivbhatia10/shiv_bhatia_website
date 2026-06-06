@@ -16,7 +16,7 @@ export const projects: Project[] = [
         blurb: "Java time → Rust",
         description:
             "A port of the Java time library to Rust. Implements a complete parser and formatter for Java-style datetime pattern strings, handles resolution logic for inferring missing information, and interops with Chrono. Built as an open source library with Palantir.",
-        tags: ["Rust", "open source"],
+        tags: ["Rust", "Java"],
         featured: true,
     },
     {
@@ -26,7 +26,7 @@ export const projects: Project[] = [
         blurb: "Apollonian gasket, in GLSL",
         description:
             "A navigable render of the Apollonian gasket fractal. Uses raymarching and GLSL fragment shading.",
-        tags: ["GLSL", "graphics"],
+        tags: ["GLSL", "JavaScript"],
         featured: true,
     },
     {
@@ -46,7 +46,7 @@ export const projects: Project[] = [
         blurb: "fast shell-agnostic terminal history",
         description:
             "A fast, shell-agnostic terminal history application for macOS written in Rust.",
-        tags: ["Rust", "CLI"],
+        tags: ["Rust"],
     },
     {
         name: "torch_sparse_autoencoder",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
         blurb: "minimal SAE library for PyTorch",
         description:
             "A minimal PyTorch library for handling sparse autoencoders for language/vision models. Designed to work for a wide range of model architectures while still providing a simple API.",
-        tags: ["PyTorch", "interp"],
+        tags: ["Python"],
     },
     {
         name: "advent_of_code_2024",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         blurb: "boid sim in Rust + wasm",
         description:
             "A boid simulation written in Rust with macroquad targeting wasm.",
-        tags: ["Rust", "wasm"],
+        tags: ["Rust"],
     },
     {
         name: "deto_x",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
         blurb: "LLM-powered tweet filter",
         description:
             "A Chrome extension that lets you filter out tweets with a custom prompt and LLMs.",
-        tags: ["TypeScript", "LLM"],
+        tags: ["TypeScript"],
     },
     {
         name: "IR_spectra_CNN_classifier",
@@ -91,7 +91,7 @@ export const projects: Project[] = [
         blurb: "functional groups from IR spectra",
         description:
             "Using IR spectra data for organic compounds, we trained a CNN to predict the functional groups present in a molecule. The final model achieved an F1 score better than an average first-year chemistry student at Imperial.",
-        tags: ["ML", "chemistry"],
+        tags: ["Python"],
     },
     {
         name: "tropical_expressivity_of_neural_networks",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         blurb: "paper, arXiv 2405.20174",
         description:
             "A paper I worked on exploring how tropical geometry can be used to derive information-theoretic properties of neural networks.",
-        tags: ["paper", "math"],
+        tags: ["ML", "interpretability"],
     },
     {
         name: "cellular_sheaf_generator",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
         blurb: "random simplicial complexes",
         description:
             "Often in computational algebraic topology, it's useful to be able to randomly generate simplicial complexes of arbitrary dimension in a usable format for experiments. Working with a researcher at Imperial, I wrote a small library for this purpose, specifically tailored to persistent homology experiments for topological data analysis.",
-        tags: ["math", "TDA"],
+        tags: ["Python"],
     },
     {
         name: "csvtui",
@@ -118,7 +118,7 @@ export const projects: Project[] = [
         blurb: "vim-style CSV editor in the terminal",
         description:
             "A small Rust app that lets you view and edit CSV files from the terminal with vim-like keybindings. I use it as a daily metric tracker.",
-        tags: ["Rust", "CLI"],
+        tags: ["Rust"],
     },
     {
         name: "WACC",
@@ -127,7 +127,7 @@ export const projects: Project[] = [
         blurb: "compiler in Scala with parsley",
         description:
             "A compiler written in Scala with parsley for a variant of the While family of languages.",
-        tags: ["Scala", "compilers"],
+        tags: ["Scala"],
     },
     {
         name: "pintos",
@@ -136,6 +136,6 @@ export const projects: Project[] = [
         blurb: "x86 OS in C",
         description:
             "An x86 operating system written in C with threads and user programs.",
-        tags: ["C", "systems"],
+        tags: ["C"],
     },
 ];
