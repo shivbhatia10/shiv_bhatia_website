@@ -1,0 +1,18 @@
+{
+  "name": "shiv-bhatia-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.0",
+    "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/mdx": "^3.1.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "tailwindcss": "^3.4.14"
+  }
+}

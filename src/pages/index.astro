@@ -1,0 +1,82 @@
+---
+import Base from "../layouts/Base.astro";
+import { projects } from "../data/projects";
+
+const featured = projects.filter((p) => p.featured);
+---
+
+<Base>
+    <section class="space-y-6 max-w-prose">
+        <h1
+            class="font-serif text-3xl md:text-4xl leading-tight tracking-tight"
+        >
+            Hi, I'm Shiv — a programmer based in London.
+        </h1>
+        <p class="text-muted">
+            I'm interested in systems programming, geometry, quantum mechanics,
+            and a bunch of other things. When I'm not programming or thinking
+            about maths, I like hiking, cycling, playing the piano, and reading
+            books.
+        </p>
+    </section>
+
+    <section class="mt-14 md:mt-20">
+        <div class="flex items-baseline justify-between mb-5">
+            <h2
+                class="font-sans text-xs uppercase tracking-[0.18em] text-muted"
+            >
+                Selected work
+            </h2>
+            <a
+                href="/projects"
+                class="font-sans text-xs no-underline text-muted hover:text-ink"
+                >all projects &rarr;</a
+            >
+        </div>
+        <ul class="divide-y divide-rule border-y border-rule">
+            {
+                featured.map((p) => (
+                    <li>
+                        <a
+                            href={p.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="group flex items-baseline justify-between gap-6 py-3 no-underline"
+                        >
+                            <span class="font-mono text-[15px] group-hover:text-accent">
+                                {p.name}
+                            </span>
+                            <span class="font-sans text-sm text-muted text-right shrink">
+                                {p.blurb}
+                            </span>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
+
+    <section class="mt-14 md:mt-20">
+        <h2
+            class="font-sans text-xs uppercase tracking-[0.18em] text-muted mb-5"
+        >
+            Elsewhere
+        </h2>
+        <ul class="font-sans text-sm space-y-2">
+            <li>
+                <a
+                    href="https://github.com/shivbhatia10"
+                    target="_blank"
+                    rel="noopener noreferrer">github.com/shivbhatia10</a
+                >
+            </li>
+            <li>
+                <a
+                    href="https://www.linkedin.com/in/shiv-bhatia/"
+                    target="_blank"
+                    rel="noopener noreferrer">linkedin.com/in/shiv-bhatia</a
+                >
+            </li>
+        </ul>
+    </section>
+</Base>

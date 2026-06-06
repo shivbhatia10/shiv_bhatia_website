@@ -1,0 +1,26 @@
+---
+const { pathname } = Astro.url;
+const items = [
+  { href: "/", label: "home" },
+  { href: "/projects", label: "projects" },
+  { href: "/blog", label: "blog" },
+];
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+---
+
+<nav class="flex items-center gap-5 font-sans text-sm text-muted">
+  {
+    items.map((item) => (
+      <a
+        href={item.href}
+        class:list={[
+          "no-underline hover:text-ink transition-colors",
+          isActive(item.href) && "text-ink",
+        ]}
+      >
+        {item.label}
+      </a>
+    ))
+  }
+</nav>

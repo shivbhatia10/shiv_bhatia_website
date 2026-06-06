@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-ink bg-paper;
+    font-feature-settings: "ss01", "cv11";
+  }
+  body {
+    @apply font-serif text-[17px] leading-[1.65] antialiased;
+  }
+  ::selection {
+    @apply bg-ink/10;
+  }
+  a {
+    @apply underline decoration-rule decoration-1 underline-offset-[3px] transition-colors hover:decoration-ink;
+  }
+}
