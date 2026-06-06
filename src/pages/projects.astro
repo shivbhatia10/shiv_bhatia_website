@@ -4,50 +4,50 @@ import { projects } from "../data/projects";
 ---
 
 <Base title="Projects · Shiv Bhatia" description="Things I've built or done.">
-  <section class="max-w-prose">
-    <h1 class="font-serif text-3xl md:text-4xl tracking-tight">Projects</h1>
-    <p class="text-muted mt-3">Some things I've built or done.</p>
-  </section>
+    <section class="max-w-prose">
+        <h1 class="font-serif text-3xl md:text-4xl tracking-tight">Projects</h1>
+        <p class="text-muted mt-3">Some things I've built or done.</p>
+    </section>
 
-  <section class="mt-10 md:mt-14">
-    <ul class="space-y-8 md:space-y-10">
-      {
-        projects.map((p) => (
-          <li class="grid md:grid-cols-[12rem_1fr] gap-1 md:gap-8">
-            <div class="md:pt-0.5">
-              <a
-                href={p.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-mono text-[15px] no-underline hover:text-accent break-words"
-              >
-                {p.name}
-              </a>
-              {p.tags && (
-                <div class="hidden md:flex flex-wrap gap-1.5 mt-2">
-                  {p.tags.map((t) => (
-                    <span class="font-sans text-[11px] uppercase tracking-wider text-muted">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-            <div class="max-w-prose">
-              <p class="font-serif">{p.description}</p>
-              {p.tags && (
-                <div class="flex md:hidden flex-wrap gap-1.5 mt-2">
-                  {p.tags.map((t) => (
-                    <span class="font-sans text-[11px] uppercase tracking-wider text-muted">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+    <section class="mt-10 md:mt-14">
+        <ul class="space-y-8 md:space-y-10">
+            {
+                projects.map((p) => (
+                    <li class="grid md:grid-cols-[12rem_1fr] gap-1 md:gap-8">
+                        <div class="md:pt-0.5">
+                            <a
+                                href={p.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-mono text-[15px] no-underline hover:text-accent break-words"
+                            >
+                                {p.name}
+                            </a>
+                            {p.tags && (
+                                <div class="hidden md:flex flex-wrap gap-1.5 mt-2">
+                                    {p.tags.map((t) => (
+                                        <span class="font-sans text-[11px] uppercase tracking-wider text-muted">
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                        <div class="max-w-prose">
+                            <p class="font-serif">{p.description}</p>
+                            {p.tags && (
+                                <div class="flex md:hidden flex-wrap gap-1.5 mt-2">
+                                    {p.tags.map((t) => (
+                                        <span class="font-sans text-[11px] uppercase tracking-wider text-muted">
+                                            {t}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </li>
+                ))
+            }
+        </ul>
+    </section>
 </Base>
